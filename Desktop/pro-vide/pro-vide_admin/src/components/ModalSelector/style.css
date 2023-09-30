@@ -1,0 +1,48 @@
+.btn-choose-modal {
+    width: 130px;
+    height: 100px;
+
+    display: flex;
+    row-gap: 10px;
+
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+
+    border-radius: 10px;    
+    cursor: pointer;
+}
+
+.btn-choose-modal .fas {
+    font-size: 1.8rem;
+    color: #444442;
+    transition: .3s;
+}
+
+.btn-choose-modal p {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #444442;
+    transition: .3s;
+}
+
+.btn-choose-modal:hover .fas,
+.btn-choose-modal:hover p {
+    color: white;
+}   
+
+.colorBtn-create:hover {
+    background-color: #0467ab;
+    opacity: .8;
+}
+
+.colorBtn-update:hover {
+    background-color: #444442;
+    opacity: .8;
+}
+
+.colorBtn-delete:hover {
+    background-color: #d41217;
+    opacity: .8;
+}

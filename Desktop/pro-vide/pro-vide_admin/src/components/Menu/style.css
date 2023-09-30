@@ -1,0 +1,32 @@
+.menu {
+    height: 89vh;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0 1px 4px #00000015;
+    padding: 0 40px;
+}
+
+.menu-choose-modal {
+    display: flex;
+    column-gap: 20%;
+    justify-content: center;
+    box-shadow: 0 1px 4px #00000015;
+    padding: 10px 40px;
+}
+
+.modal {
+    min-height: 100vh;
+    padding: 40px 0;
+    
+    display: flex; 
+    flex-direction: column;
+}
+
+.modal h2 {
+    text-align: center;
+    padding: 5px 0 17px;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #0467ab;
+}

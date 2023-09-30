@@ -1,0 +1,37 @@
+.identification {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 25px;
+    column-gap: 30px;
+    padding: 30px 100px;
+}
+
+.identification select {
+    height: 28px;
+    padding: 0 8px;
+
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+
+    background-color: transparent;
+    color: #444442;
+}
+
+.identification .inputName {
+    height: 30px;
+    border: none;
+    padding: 0 8px;
+    
+    background-color: transparent;
+    border-top: solid 1px #44444280;
+    border-bottom: solid 1px #44444280;
+    
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.identification .inputName::placeholder {
+    text-align: center;
+}

@@ -1,0 +1,75 @@
+.container-list {
+    display: flex;
+    column-gap: 50px;
+    margin: 100px 0;
+}
+
+.container-list .list {
+    width: 33%;
+    
+    display: flex;
+    row-gap: 10px;
+
+    align-items: center;
+    flex-direction: column;
+}
+
+.container-list h3 {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #0467ab;
+    font-family: "Roboto", sans-serif;
+}
+
+.container-list input {
+    height: 35px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    
+    background-color: transparent;
+    font-family: "Roboto", sans-serif;
+    border-bottom: solid 1px #444442;
+
+}
+
+.container-list li:last-child input {
+    border: none;
+}
+
+.container-list .controller {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+
+.container-list .controller .fas {
+    width: 50%;
+    height: 22px;
+    color: white;
+    font-size: .85rem;
+    transition: all .2s;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-list .controller .fas:hover {
+    width: 47.5%;
+    height: 20px;
+}
+
+.container-list .controller .fa-plus {
+    background-color: #0467ab;
+    border-radius: 5px 0 0 5px;
+}
+
+.container-list .controller .fa-minus {
+    background-color: #d41217;
+    border-radius: 0 5px 5px 0;
+}

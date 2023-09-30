@@ -1,0 +1,94 @@
+.banner {
+    height: 11vh;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px #00000015;
+    background-color: white;
+}
+
+.logo_entreprise {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+
+    transition: .3s;
+    padding: 0 20px;
+}
+
+.logo_entreprise:hover {
+    opacity: .6;
+}
+
+.logo_entreprise img {
+    height: 70%;
+}
+
+.logo_entreprise h2 {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    padding-top: 7px;
+
+    line-height: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+
+    color: #0467ab;
+}
+
+.logo_entreprise h2 span {
+    text-transform: none;
+    font-weight: 300;
+    font-size: .8rem;
+
+    color: #08080c;
+}
+
+.banner h3 {
+    height: 100%;
+    display: flex;
+
+    flex-direction: column; 
+    justify-content: center;
+ 
+    color: #444442;
+    padding-bottom: 3px;
+
+    font-family:'Franklin Gothic Medium', sans-serif;        
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.banner h3 span {
+    margin-left: 40px;
+    position: relative;
+}
+
+.banner h3 span::after {
+    content: "";
+    display: flex;
+    
+    width: 40%;
+    height: 1px;
+
+    background-color: #d41217;
+    position: absolute;    
+    left: 0;
+}
+
+.banner .fas {
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    transition: .3s;
+    font-size: 2rem;
+
+    cursor: pointer;
+    color: #444442;    
+    margin-left: 145px;
+    padding: 0 20px 2px 0;
+}
+
+.banner .fas:hover {
+    opacity: .7;
+}

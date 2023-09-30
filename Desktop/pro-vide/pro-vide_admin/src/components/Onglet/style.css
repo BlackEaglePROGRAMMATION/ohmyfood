@@ -1,0 +1,39 @@
+.onglet {
+    width: 20%;
+    max-height: 150px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    padding: 20px 0 25px;
+    transition: .3s;
+    cursor: pointer;
+    row-gap: 10px;
+}
+
+.onglet .fas {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 2.5rem;
+    color: #444442;
+}
+
+.onglet h4 {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+
+    color: #444442;
+}
+
+.onglet:hover h4,
+.onglet:hover .fas {
+    opacity: .75;
+    color: #d41217;
+}
