@@ -1,0 +1,23 @@
+
+// Reset
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+
+    outline: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+}
