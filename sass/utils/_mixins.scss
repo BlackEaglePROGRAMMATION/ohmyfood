@@ -18,3 +18,10 @@
     font-weight: 900;
     font-family: 'Font Awesome 5 Free';
 }
+
+@mixin backgroundGradiant () {
+    background: linear-gradient(-10deg, 
+        $primary-color -5.2%, 
+        $second-color 110.74%
+    );
+}

@@ -1,0 +1,103 @@
+.banner {
+    row-gap: 10px;
+    @include flex-column;
+    background-color: $background-color;
+    padding: 40px 30px;
+    text-align: center;
+
+    h2 {        
+        padding: 0 15px;
+    }
+
+    p {
+        font-size: 18px;
+        font-weight: 300;
+    }
+
+    a {
+        font-size: 1rem;
+        font-weight: 500;
+        
+        color: white;
+        border-radius: 25px;
+        @include backgroundGradiant;
+        
+        margin: 15px auto 10px;
+        padding: 13px 19px;
+    }
+}
+
+.functioning {
+    row-gap: 10px;
+    @include flex-column;
+    padding: 48px 20px;
+
+    ul {
+        row-gap: 25px;
+        @include flex-column;
+        counter-reset: counter;
+        padding: 20px 0;
+
+        li {
+            height: 72px;
+
+            display: flex;
+            align-items: center;
+
+            border-radius: 20px;
+            background-color: $background-color;
+            box-shadow: 0 4px 8px #00000026;
+
+            margin-left: 12px;
+            padding-left: 70px;
+            position: relative;
+        }
+
+        li::before {
+            width: 24px;
+            height: 24px;
+
+            display: flex;
+            @include center;            
+
+            content: counter(counter);
+            counter-increment: counter;
+            
+            background-color: $primary-color;
+            border-radius: 50%;
+            color: white;
+
+            transform: translate(-50%, -50%);
+            position: absolute;
+            top: 50%;
+            left: 0;
+        }
+
+        span {
+            position: relative;
+        }
+
+        span::before {
+            font-size: 18px;
+            color: #7e7e7e;
+
+            transform: translateX(-50%);
+            position: absolute;
+            left: -30px;
+        }
+
+        #phone::before {
+            @include fontAwesome('\f3cd');
+            font-size: 20px;
+        }
+
+        #list::before {
+            @include fontAwesome('\f0ca');            
+        }
+
+        #market::before {
+            @include fontAwesome('\f54e');
+            color: $primary-color;            
+        }        
+    }
+}
