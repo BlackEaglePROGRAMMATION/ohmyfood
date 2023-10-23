@@ -16,4 +16,110 @@ a {
 button {
   background-color: transparent;
   border: none;
+}
+
+#loader {
+  width: 100%;
+  height: 100vh;
+  row-gap: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  animation: dispaire 5s linear forwards;
+  background: linear-gradient(-10deg, #9356DC -5.2%, #FF79DA 110.74%);
+  color: white;
+  position: fixed;
+  z-index: 50;
+  left: 0;
+  top: 0;
+}
+#loader .logo {
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+  animation: startLoader 0.7s 1 ease-out;
+}
+#loader .logo img {
+  height: 40px;
+}
+#loader .logo .pizza {
+  height: 60px;
+  animation: rotatePizza 5s infinite linear;
+}
+#loader p {
+  display: flex;
+  column-gap: 4px;
+  margin-bottom: 50px;
+  animation: startLoader 0.7s 1 ease-out;
+  font-family: "Shrikhand", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 100;
+}
+#loader p span {
+  animation: loader 2s 2 linear;
+}
+#loader p span:nth-child(1) {
+  animation-delay: 0.95s;
+}
+#loader p span:nth-child(2) {
+  animation-delay: 1.2s;
+}
+#loader p span:nth-child(3) {
+  animation-delay: 1.45s;
+}
+#loader p span:nth-child(4) {
+  animation-delay: 1.7s;
+}
+#loader p span:nth-child(5) {
+  animation-delay: 1.95s;
+}
+#loader p span:nth-child(6) {
+  animation-delay: 2.2s;
+}
+#loader p span:nth-child(7) {
+  animation-delay: 2.45s;
+}
+#loader p span:nth-child(8) {
+  animation-delay: 2.7s;
+}
+
+@keyframes startLoader {
+  0% {
+    transform: translateY(-50vh);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes loader {
+  0% {
+    transform: translateY(0);
+  }
+  12% {
+    transform: translateY(-12px);
+  }
+  25% {
+    transform: translateY(0);
+  }
+}
+@keyframes rotatePizza {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes dispaire {
+  95% {
+    opacity: 1;
+    z-index: 50;
+  }
+  100% {
+    z-index: -50;
+    opacity: 0;
+  }
 }/*# sourceMappingURL=main.css.map */

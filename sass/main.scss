@@ -1,6 +1,5 @@
 @import "./utils/variables";
 @import "./utils/mixins";
-@import "./utils/keyframes";
 
 @import "./reset";
 
@@ -10,3 +9,5 @@
 
 @import "./pages/home";
 @import "./pages/restaurants";
+
+@import "./utils/keyframes";

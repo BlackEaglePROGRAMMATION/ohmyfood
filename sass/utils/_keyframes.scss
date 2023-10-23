@@ -1,0 +1,42 @@
+@keyframes startLoader {
+    0% {
+        transform: translateY(-50vh);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes loader {
+    0% {
+        transform: translateY(0);
+    }
+    12% {
+        transform: translateY(-12px);
+    }
+    25% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes rotatePizza {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes dispaire {    
+    95% {
+        opacity: 1;
+        z-index: 50;
+    }
+    100% {
+        z-index: -50; 
+        opacity: 0;       
+    }
+}
