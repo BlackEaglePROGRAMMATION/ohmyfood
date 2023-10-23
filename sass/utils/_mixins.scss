@@ -13,12 +13,6 @@
     justify-content: center;
 }
 
-@mixin roboto ($size: 16px, $weight: 400) {
-    font-size: $size;
-    font-weight: $weight;
-    font-family: 'Roboto', sans-serif;
-}
-
 @mixin fontAwesome ($content: '') {
     content: $content;
     font-weight: 900;

@@ -12,6 +12,10 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
 a {
     text-decoration: none;
     color: #000;
@@ -20,4 +24,9 @@ a {
 button {
     background-color: transparent;
     border: none;
+}
+
+input {
+    border: none;
+    background-color: transparent;
 }
