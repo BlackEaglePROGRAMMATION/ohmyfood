@@ -202,6 +202,7 @@ footer ul i {
 footer ul li {
   display: flex;
   column-gap: 5px;
+  cursor: pointer;
   font-size: 1rem;
   font-weight: 500;
 }
