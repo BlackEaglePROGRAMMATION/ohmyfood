@@ -31,6 +31,26 @@ h2 {
   font-size: 24px;
 }
 
+.heart {
+  width: 22px;
+  height: 22px;
+  margin: 0 13px;
+  cursor: pointer;
+  position: absolute;
+}
+.heart .fa-heart {
+  font-size: 24px;
+  font-weight: 100;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+.heart:hover .fa-heart {
+  animation: heart 0.5s 1 linear forwards;
+}
+
 #loader {
   width: 100%;
   height: 100vh;
@@ -169,7 +189,11 @@ header nav input::placeholder {
   border-radius: 25px;
   background: linear-gradient(-10deg, #9356DC -5.2%, #FF79DA 110.74%);
   margin: 15px auto 10px;
+  transition: all 0.3s;
   padding: 13px 19px;
+}
+.banner a:hover {
+  opacity: 0.7;
 }
 
 .functioning {
@@ -241,7 +265,7 @@ header nav input::placeholder {
 }
 
 #restaurants {
-  row-gap: 15px;
+  row-gap: 20px;
   display: flex;
   flex-direction: column;
   background-color: #F6F6F6;
@@ -259,25 +283,9 @@ header nav input::placeholder {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.062745098);
 }
 #restaurants ul li .heart {
-  width: 22px;
-  height: 22px;
-  margin: 0 13px;
-  cursor: pointer;
-  position: absolute;
   bottom: 30px;
   right: 15px;
   z-index: 10;
-}
-#restaurants ul li .heart .fa-heart {
-  font-size: 24px;
-  font-weight: 100;
-  transform: translate(-50%, -50%);
-  position: absolute;
-  left: 50%;
-  top: 50%;
-}
-#restaurants ul li .heart:hover .fa-heart {
-  animation: heart 0.5s 1 linear forwards;
 }
 #restaurants ul a {
   display: flex;
@@ -306,6 +314,137 @@ header nav input::placeholder {
 #restaurants ul a .container-descrip h3 span {
   font-size: 17px;
   font-weight: 300;
+}
+
+.background-img {
+  width: 100%;
+  height: 275px;
+  position: absolute;
+  z-index: -1;
+  top: 72px;
+}
+.background-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container-main {
+  row-gap: 40px;
+  display: flex;
+  flex-direction: column;
+  background-color: #F6F6F6;
+  border-radius: 40px;
+  padding: 35px 17px 40px;
+  margin-top: 220px;
+}
+.container-main h2 {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  font-family: "Shrikhand", sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+}
+.container-main h2 .heart {
+  transform: translateY(-50%);
+  right: 10px;
+  top: 50%;
+}
+.container-main section {
+  row-gap: 12px;
+  display: flex;
+  flex-direction: column;
+}
+.container-main section h3 {
+  font-size: 1rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.container-main section h3::after {
+  width: 40px;
+  height: 2px;
+  transition: all 0.5s;
+  content: "";
+  display: flex;
+  margin-top: 5px;
+  background-color: #99E2D0;
+}
+.container-main section ul {
+  row-gap: 12px;
+  display: flex;
+  flex-direction: column;
+}
+.container-main section li {
+  display: flex;
+  align-items: end;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.0823529412);
+  transition: all 0.5s;
+  overflow: hidden;
+}
+.container-main section li h4 {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 15px 0 15px 15px;
+  width: calc(100% - 70px);
+  transition: all 0.5s;
+  font-weight: 500;
+  font-size: 18px;
+}
+.container-main section li h4 span {
+  font-size: 15px;
+  font-weight: 300;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.container-main section li p {
+  width: 20px;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 15px 0;
+  margin: 0 25px;
+}
+.container-main section li .fa-circle-check {
+  width: 0;
+  height: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #99E2D0;
+  color: white;
+  transition: all 0.5s;
+  font-size: 20px;
+  opacity: 0;
+}
+.container-main section li:hover {
+  transition: all 0.5s;
+}
+.container-main section li:hover h4 {
+  width: calc(100% - 70px - 59px);
+}
+.container-main section li:hover .fa-circle-check {
+  width: 59px;
+  opacity: 1;
+}
+.container-main section:hover h3::after {
+  width: 60px;
+}
+.container-main .btn-commander {
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  background: linear-gradient(-10deg, #9356DC -5.2%, #FF79DA 110.74%);
+  border-radius: 25px;
+  transition: all 0.3s;
+  padding: 16px 49px;
+  margin: 0 auto;
+}
+.container-main .btn-commander:hover {
+  opacity: 0.7;
 }
 
 @keyframes startLoader {
