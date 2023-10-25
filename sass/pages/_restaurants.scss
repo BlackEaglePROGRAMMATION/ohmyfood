@@ -1,6 +1,7 @@
 .background-img {
     width: 100%;
     height: 275px;
+    
     position: absolute;
     z-index: -1;
     top: 72px;
@@ -51,11 +52,12 @@
         h3::after {
             width: 40px;
             height: 2px;
-            transition: all .5s;
-
+            
             content: '';
             display: flex;
+            
             margin-top: 5px;
+            transition: all .5s;
             background-color: $third-color;
         }
 
@@ -67,17 +69,27 @@
         li {
             display: flex;
             align-items: end;
-
+            
+            cursor: pointer;
             border-radius: 15px;
             background-color: white;
+            
             box-shadow: 0 4px 8px #00000015;
             transition: all .5s;
             overflow: hidden;
+
+            @for $i from 1 through 4 {
+                &:nth-child(#{$i}){
+                    animation-delay: .15s*$i;
+                }
+            }
+            animation: happen 1s both;
             
             h4 {
                 overflow: hidden;
                 white-space: nowrap;
                 text-overflow: ellipsis;
+
                 padding: 15px 0 15px 15px;
                 width: calc(100% - 70px);
                 
@@ -88,6 +100,7 @@
                 span {
                     font-size: 15px;
                     font-weight: 300;
+
                     overflow: hidden;
                     white-space: nowrap;
                     text-overflow: ellipsis;
@@ -97,7 +110,8 @@
             p {
                 width: 20px;
                 font-size: 15px;
-                font-weight: 700;                
+                font-weight: 700;  
+
                 padding: 15px 0;
                 margin: 0 25px;
             }
@@ -143,16 +157,38 @@
         color: white;
         font-size: 1rem;
         font-weight: 500;
+
         @include backgroundGradiant;
         border-radius: 25px;
-
-
         transition: all .3s;
+
         padding: 16px 49px;
         margin: 0 auto;
     }
 
     .btn-commander:hover {
         opacity: .7;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .background-img {
+        height: 383px;
+        top: 90px;
+    }
+
+    .container-main {
+        padding: 51px 15% 40px;
+        margin: 342px 15% 0;
+    
+        h2 {
+            @include center;
+            column-gap: 40px;  
+    
+            .heart {   
+                position: unset;
+                margin-top: 20px;                    
+            }
+        }
     }
 }

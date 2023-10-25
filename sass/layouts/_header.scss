@@ -58,3 +58,20 @@ header {
         }
     }
 }
+
+
+@media screen and (min-width: 992px) {
+    header {
+        h1 {
+            margin: 20px 0;
+            font-size: 34px;
+        }
+
+        nav {
+
+            input {
+                width: 150px;
+            }
+        }
+    }
+}

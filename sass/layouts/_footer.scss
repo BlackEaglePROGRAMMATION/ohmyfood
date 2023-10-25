@@ -1,9 +1,11 @@
 footer {
     row-gap: 14px;
-    padding: 22px 25px;    
     @include flex-column;
+    
     background-color: $text-color;
     color: white;
+
+    padding: 22px 25px;    
 
     .title {
         font-family: 'Shrikhand', sans-serif;
@@ -24,8 +26,41 @@ footer {
         li {
             display: flex;
             column-gap: 5px;
+
             font-size: 1rem;
             font-weight: 500;
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    footer {
+        column-gap: 17.5%;
+        align-items: center;
+        padding: 45px 60px 25px;  
+        flex-direction: row-reverse;
+    
+        .title {
+            font-size: 24px;
+        }
+    
+        ul {
+            flex-direction: row;  
+            column-gap: 100px;
+    
+            i {
+                width: 20px;
+                height: 20px;
+                font-size: 14px;
+            }
+    
+            li {
+                display: flex;
+                column-gap: 5px;
+
+                font-size: 1rem;
+                font-weight: 500;
+            }
         }
     }
 }

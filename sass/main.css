@@ -167,13 +167,22 @@ header nav input::placeholder {
   color: #353535;
 }
 
+@media screen and (min-width: 992px) {
+  header h1 {
+    margin: 20px 0;
+    font-size: 34px;
+  }
+  header nav input {
+    width: 150px;
+  }
+}
 footer {
   row-gap: 14px;
-  padding: 22px 25px;
   display: flex;
   flex-direction: column;
   background-color: #353535;
   color: white;
+  padding: 22px 25px;
 }
 footer .title {
   font-family: "Shrikhand", sans-serif;
@@ -197,13 +206,39 @@ footer ul li {
   font-weight: 500;
 }
 
+@media screen and (min-width: 992px) {
+  footer {
+    column-gap: 17.5%;
+    align-items: center;
+    padding: 45px 60px 25px;
+    flex-direction: row-reverse;
+  }
+  footer .title {
+    font-size: 24px;
+  }
+  footer ul {
+    flex-direction: row;
+    column-gap: 100px;
+  }
+  footer ul i {
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+  }
+  footer ul li {
+    display: flex;
+    column-gap: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+}
 .banner {
   row-gap: 10px;
   display: flex;
   flex-direction: column;
   background-color: #F6F6F6;
-  padding: 40px 30px;
   text-align: center;
+  padding: 40px 30px;
 }
 .banner h2 {
   padding: 0 15px;
@@ -324,6 +359,16 @@ footer ul li {
 }
 #restaurants ul a .container-img {
   height: 174px;
+  position: relative;
+}
+#restaurants ul a .container-img span {
+  padding: 7px 10px;
+  border-radius: 2px;
+  background-color: #99E2D0;
+  color: #008766;
+  position: absolute;
+  right: 20px;
+  top: 15px;
 }
 #restaurants ul a .container-img img {
   width: 100%;
@@ -332,10 +377,10 @@ footer ul li {
 }
 #restaurants ul a .container-descrip {
   height: 77px;
+  padding: 16px 13px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 13px;
 }
 #restaurants ul a .container-descrip h3 {
   font-size: 18px;
@@ -346,6 +391,42 @@ footer ul li {
   font-weight: 300;
 }
 
+@media screen and (min-width: 992px) {
+  .banner h2 {
+    padding: unset;
+    font-size: 40px;
+  }
+  .functioning {
+    row-gap: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  .functioning h2 {
+    margin-left: calc(20% - 24px);
+  }
+  .functioning ul {
+    width: calc(60% + 48px);
+    flex-direction: row;
+    column-gap: 24px;
+    margin: 0 auto;
+  }
+  .functioning ul li {
+    width: 33%;
+  }
+  #restaurants {
+    row-gap: 28px;
+    padding: 30px 12.5% 60px;
+  }
+  #restaurants ul {
+    row-gap: 50px;
+    column-gap: 100px;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  #restaurants ul li {
+    width: calc(50% - 50px);
+  }
+}
 .background-img {
   width: 100%;
   height: 275px;
@@ -394,10 +475,10 @@ footer ul li {
 .container-main section h3::after {
   width: 40px;
   height: 2px;
-  transition: all 0.5s;
   content: "";
   display: flex;
   margin-top: 5px;
+  transition: all 0.5s;
   background-color: #99E2D0;
 }
 .container-main section ul {
@@ -408,11 +489,25 @@ footer ul li {
 .container-main section li {
   display: flex;
   align-items: end;
+  cursor: pointer;
   border-radius: 15px;
   background-color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.0823529412);
   transition: all 0.5s;
   overflow: hidden;
+  animation: happen 1s both;
+}
+.container-main section li:nth-child(1) {
+  animation-delay: 0.15s;
+}
+.container-main section li:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.container-main section li:nth-child(3) {
+  animation-delay: 0.45s;
+}
+.container-main section li:nth-child(4) {
+  animation-delay: 0.6s;
 }
 .container-main section li h4 {
   overflow: hidden;
@@ -477,6 +572,25 @@ footer ul li {
   opacity: 0.7;
 }
 
+@media screen and (min-width: 992px) {
+  .background-img {
+    height: 383px;
+    top: 90px;
+  }
+  .container-main {
+    padding: 51px 15% 40px;
+    margin: 342px 15% 0;
+  }
+  .container-main h2 {
+    align-items: center;
+    justify-content: center;
+    column-gap: 40px;
+  }
+  .container-main h2 .heart {
+    position: unset;
+    margin-top: 20px;
+  }
+}
 @keyframes startLoader {
   0% {
     transform: translateY(-50vh);
@@ -538,6 +652,14 @@ footer ul li {
     background-clip: text;
     font-weight: 900;
     font-size: 24px;
+    opacity: 1;
+  }
+}
+@keyframes happen {
+  0% {
+    opacity: 0;
+  }
+  100% {
     opacity: 1;
   }
 }/*# sourceMappingURL=main.css.map */
