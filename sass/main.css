@@ -167,6 +167,36 @@ header nav input::placeholder {
   color: #353535;
 }
 
+footer {
+  row-gap: 14px;
+  padding: 22px 25px;
+  display: flex;
+  flex-direction: column;
+  background-color: #353535;
+  color: white;
+}
+footer .title {
+  font-family: "Shrikhand", sans-serif;
+  font-weight: 100;
+  font-size: 18px;
+}
+footer ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+footer ul i {
+  width: 20px;
+  height: 20px;
+  font-size: 14px;
+}
+footer ul li {
+  display: flex;
+  column-gap: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
 .banner {
   row-gap: 10px;
   display: flex;
