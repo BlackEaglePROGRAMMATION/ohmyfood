@@ -1,0 +1,13 @@
+@import "./utils/variables";
+@import "./utils/mixins";
+
+@import "./reset";
+
+@import "./layouts/loader";
+@import "./layouts/header";
+@import "./layouts/footer";
+
+@import "./pages/home";
+@import "./pages/restaurants";
+
+@import "./utils/keyframes";

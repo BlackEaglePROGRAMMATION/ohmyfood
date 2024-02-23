@@ -1,0 +1,197 @@
+.background-img {
+    width: 100%;
+    height: 275px;
+    max-width: 1440px;
+
+    position: absolute;
+    z-index: -1;
+    top: 72px;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.container-main {
+    row-gap: 40px;
+    @include flex-column;
+
+    background-color: $background-color;
+    border-radius: 40px;
+
+    padding: 35px 17px 40px;
+    margin-top: 220px;
+
+    h2 {
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+
+        font-family: 'Shrikhand', sans-serif;
+        font-weight: 400;
+        font-size: 28px;
+
+        .heart {
+            transform: translateY(-50%);
+            right: 10px;
+            top: 50%;
+        }
+    }
+
+    section {
+        row-gap: 12px;
+        @include flex-column;
+
+        h3 {
+            font-size: 1rem;
+            font-weight: 300;
+            text-transform: uppercase;
+        }
+
+        h3::after {
+            width: 40px;
+            height: 2px;
+
+            content: '';
+            display: flex;
+
+            margin-top: 5px;
+            transition: all .5s;
+            background-color: $third-color;
+        }
+
+        ul {
+            row-gap: 12px;
+            @include flex-column;
+        }
+
+        li {
+            display: flex;
+            align-items: end;
+
+            cursor: pointer;
+            border-radius: 15px;
+            background-color: white;
+
+            box-shadow: 0 4px 8px #00000015;
+            transition: all .5s;
+            overflow: hidden;
+
+            @for $i from 1 through 4 {
+                &:nth-child(#{$i}) {
+                    animation-delay: .15s*$i;
+                }
+            }
+
+            animation: happen 1s both;
+
+            h4 {
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+
+                padding: 15px 0 15px 15px;
+                width: calc(100% - 70px);
+
+                transition: all .5s;
+                font-weight: 500;
+                font-size: 18px;
+
+                span {
+                    font-size: 15px;
+                    font-weight: 300;
+
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                }
+            }
+
+            p {
+                width: 20px;
+                font-size: 15px;
+                font-weight: 700;
+
+                padding: 15px 0;
+                margin: 0 25px;
+            }
+
+            .fa-circle-check {
+                width: 0;
+                height: 74px;
+
+                display: flex;
+                @include center;
+
+                background-color: $third-color;
+                color: white;
+
+                transition: all .5s;
+                font-size: 20px;
+                opacity: 0;
+            }
+        }
+
+        li:hover {
+            transition: all .5s;
+
+            h4 {
+                width: calc(100% - 70px - 59px);
+            }
+
+            .fa-circle-check {
+                width: 59px;
+                opacity: 1;
+            }
+        }
+
+    }
+
+    section:hover {
+        h3::after {
+            width: 60px;
+        }
+    }
+
+    .btn-commander {
+        color: white;
+        font-size: 1rem;
+        font-weight: 500;
+
+        @include backgroundGradiant;
+        border-radius: 25px;
+        transition: all .3s;
+
+        padding: 16px 49px;
+        margin: 0 auto;
+    }
+
+    .btn-commander:hover {
+        opacity: .7;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .background-img {
+        height: 383px;
+        top: 90px;
+    }
+
+    .container-main {
+        padding: 51px 15% 40px;
+        margin: 342px 15% 0;
+        border-radius: 40px 40px 0 0;
+
+        h2 {
+            @include center;
+            column-gap: 40px;
+
+            .heart {
+                position: unset;
+                margin-top: 20px;
+            }
+        }
+    }
+}

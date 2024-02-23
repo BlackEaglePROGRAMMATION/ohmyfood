@@ -1,0 +1,35 @@
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin center {
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin fontAwesome ($content: '') {
+    content: $content;
+    font-weight: 900;
+    font-family: 'Font Awesome 5 Free';
+}
+
+@mixin backgroundGradiant () {
+    background: linear-gradient(-10deg, 
+        $primary-color -5.2%, 
+        $second-color 110.74%
+    );
+}
+
+
+@mixin textGradiant () {
+    background: -webkit-linear-gradient(-10deg, $primary-color -5.2%, $second-color 110.74%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
